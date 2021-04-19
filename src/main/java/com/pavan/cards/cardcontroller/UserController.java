@@ -32,7 +32,7 @@ public class UserController {
 	@Autowired
 	UserTransctionService userTransctionService;
 	
-	
+	//insert data into Usercard
 	@PostMapping(path="/usersCardCreate")
 	public ResponseEntity<UsersCards>  saveUserCards(@Valid @RequestBody UsersCards usersCards)
 	{	
@@ -43,6 +43,7 @@ public class UserController {
 	
 	}
 	
+	//insert data into UserTransction
 	@PostMapping(path="/UserTransctionCreate")
 	public ResponseEntity<UserTransction>  saveUserTransction(@Valid @RequestBody UserTransction userTransction)
 	{	
@@ -54,6 +55,7 @@ public class UserController {
 	}
 	
 	
+	//get the output  at user given input realtive column and sorting as userinput =ASC or DESC
 	@GetMapping("Transction/userInput")
 	@ResponseBody
 	public ResponseEntity<List<UserTransction>>  getUserTransction(@RequestParam  String userInput,@RequestParam String sortingg)

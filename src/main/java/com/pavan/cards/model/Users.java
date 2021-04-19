@@ -33,7 +33,6 @@ public class Users {
     private String name;
 
 
-
     @OneToMany(cascade = CascadeType.ALL)
     @JoinColumn(name = "user_id", referencedColumnName = "user_id")
     private List<UsersCards> userscard;

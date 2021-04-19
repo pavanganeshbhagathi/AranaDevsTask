@@ -14,12 +14,12 @@ public class UserService {
 	@Autowired
 	public UserRepository userRepository;
 	
-	
+	//saving the user
 	public Users saveUser(Users user)
 	{
 		return userRepository.save(user);
 	}
-	
+	//getting user data
 	public List<Users> getUser(String username)
 	{
 		return userRepository.findByFirstNameNativeSQL(username);

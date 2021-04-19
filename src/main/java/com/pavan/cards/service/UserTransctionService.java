@@ -20,12 +20,14 @@ public class UserTransctionService {
 	@Autowired
 	UserTransctionRepository userTransctionRepository;
 	
+	//saving Transection Data
 	public UserTransction saveUserCards(UserTransction userTransction)
 	{
 		return userTransctionRepository.save(userTransction);
 	}
 	
-	
+	// here col related column and sorting ASC or DESC
+	//gettting data from backend showing transection
 	public List<UserTransction> getData(String col,String sortingg)
 	{
 		return userTransctionRepository.findByFirstNameNativeSQL(col, sortingg);
