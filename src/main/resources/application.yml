@@ -1,0 +1,21 @@
+spring:
+    application:
+        name: card-service
+#    flyway:
+#        baseline-on-migrate: true
+    datasource:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        url: jdbc:mysql://localhost:3306/test?allowPublicKeyRetrieval=true&&useSSL=false
+        username: root
+        password: 12345       
+    jpa:
+     properties:
+      hibernate:
+       dialect: org.hibernate.dialect.MySQL8Dialect
+       globally_quoted_identifiers: true
+       format_sql: true
+      open-in-view: false
+     show-sql: true
+#     hibernate:
+#      ddl-auto:  update
+   
